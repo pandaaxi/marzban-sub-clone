@@ -3486,7 +3486,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         const dataUsage = dataLimit == "∞" ? 100 : tmpUsage;
         const dataChartColor = dataUsage < 40 ? "bg-green-500" : dataUsage < 80 ? "bg-yellow-600" : "bg-red-500";
         const resetInterval = "{{ user.data_limit_reset_strategy.value }}";
-        let expireDateVar = expireDateInit.includes("∞") ? "∞" : localStorage.getItem("lang") == "en" ? new Date(expireDateInit).toLocaleString("fa-IR-u-nu-latn").replace(",", " ") : expireDateInit;
+        let expireDateVar = expireDateInit.includes("∞") ? "∞" : localStorage.getItem("lang") == "fa" ? new Date(expireDateInit).toLocaleString("fa-IR-u-nu-latn").replace(",", " ") : expireDateInit;
         let appsJson = {
             IOS: {
                 Streisand: {
@@ -3834,15 +3834,15 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
             },
         };
         let settings = {
-            language: "en",
+            language: "fa",
         };
 
         function checkLang() {
-            window.AlpineI18n.fallbackLocale = "en";
+            window.AlpineI18n.fallbackLocale = "fa";
             let locale = localStorage.getItem("lang") ?? settings.language;
             window.AlpineI18n.create(locale, langJson);
             AlpineI18n.locale = locale;
-            document.body.setAttribute("dir", locale == "en" ? "rtl" : "ltr");
+            document.body.setAttribute("dir", locale == "fa" ? "rtl" : "ltr");
         }
 
         document.addEventListener("alpine-i18n:ready", () => {
