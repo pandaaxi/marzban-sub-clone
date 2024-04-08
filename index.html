@@ -4015,6 +4015,24 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     </div>
                 </div>
                 <div class="flex flex-col gap-y-4 mb-8 text-white text-sm sm:text-base">
+                    <div class="flex mt-6 items-center justify-center gap-x-4 mb-4">
+                        <button id="qrIconBtn"
+                            onclick="openDynamicModal('{{ user.username }} Subscription' ,  window.location.href)"
+                            class="bg-gray-100 border-gray-200 dark:bg-gray-700 dark:border-gray-600 rounded-xl pt-1 px-1">
+                            <lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000"
+                                colors="primary:#000,secondary:#000" class="w-10 h-10">
+                            </lord-icon>
+                        </button>
+
+                        <select style="
+               text-indent:15px;
+               height:50px;" id="countries"
+                            class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-3.5 bg-gray-100 border-gray-200 placeholder-gray-800 text-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                            <option value="en">English</option>
+                            <option value="kh">Khmer</option>
+                            <option value="th">Thai</option>
+                        </select>
+                    </div>
                     <h2 x-text="$t('howToConnect')"
                         class="my-4 text-3xl font-black leading-none tracking-tight text-white md:text-5xl">
 
@@ -6443,24 +6461,6 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
                         <span class="sm:text-lg" x-text="$t('guide')"></span>
                     </a>
-                    </div>
-                    <div class="flex mt-6 items-center justify-center gap-x-4 mb-4">
-                        <button id="qrIconBtn"
-                            onclick="openDynamicModal('{{ user.username }} Subscription' ,  window.location.href)"
-                            class="bg-gray-100 border-gray-200 dark:bg-gray-700 dark:border-gray-600 rounded-xl pt-1 px-1">
-                            <lord-icon src="https://cdn.lordicon.com/fqrjldna.json" trigger="loop" delay="2000"
-                                colors="primary:#000,secondary:#000" class="w-10 h-10">
-                            </lord-icon>
-                        </button>
-
-                        <select style="
-               text-indent:15px;
-               height:50px;" id="countries"
-                            class="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 py-3.5 bg-gray-100 border-gray-200 placeholder-gray-800 text-black dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
-                            <option value="en">English</option>
-                            <option value="kh">Khmer</option>
-                            <option value="th">Thai</option>
-                        </select>
                     </div>
                 </div>
             </div>
